@@ -2,7 +2,7 @@ from abc import ABC
 
 
 class Note(ABC):
-    def __init__(self, title: str | None, text: str, path: str):
+    def __init__(self, title: str, text: str, path: str):
         self.__title = title
         self.__text = text
         self.__path = path
@@ -17,7 +17,7 @@ class Note(ABC):
         return self.__path
 
     @property
-    def title(self) -> str | None:
+    def title(self) -> str:
         return self.__title
 
     @property

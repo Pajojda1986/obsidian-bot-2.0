@@ -12,9 +12,14 @@ class NoteWriter:
 
         path_to_note.parent.mkdir(parents=True, exist_ok=True)
 
-        if path_to_note.exists():
-            with path_to_note.open("a", encoding="utf-8") as file:
-                file.write(f"\n{note.text}")
-        else:
-            with path_to_note.open("w", encoding="utf-8") as file:
-                file.write(f"{note.formatted_tags}\n{note.text}")
+        try:
+            if path_to_note.exists():
+                with path_to_note.open("a", encoding="utf-8") as file:
+                    file.write(f"\n{note.text}")
+            else:
+                with path_to_note.open("w", encoding="utf-8") as file:
+                    file.write(f"{note.formatted_tags}{note.text}")
+        except OSError:
+            return "Произошла ошибка!"
+
+        return "Заметка успешно создана!"

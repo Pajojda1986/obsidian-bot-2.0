@@ -1,6 +1,7 @@
 from datetime import date
 
 from notes.note import Note
+from tags import month_tag
 
 
 class DailyNote(Note):
@@ -12,5 +13,4 @@ class DailyNote(Note):
 
         super().__init__(title, text, path)
 
-        month_tag = f"{today.year}-{today.month}"
         self.add_tag(month_tag)
