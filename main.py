@@ -1,6 +1,6 @@
-from notes import DailyNote, NoteWriter
+from notes import DailyNote, NoteWriter, PeopleNote
 if __name__ == "__main__":
-    note = DailyNote("Принял решение переписать бота")
+    note = PeopleNote("Сеня", "Мой кент")
 
     writer = NoteWriter()
     writer.write_note(note)
