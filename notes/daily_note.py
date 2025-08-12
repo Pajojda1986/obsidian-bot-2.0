@@ -1,7 +1,7 @@
 from datetime import date
 
 from notes.note import Note
-from tags import month_tag
+from utils.tags import month_tag
 
 
 class DailyNote(Note):

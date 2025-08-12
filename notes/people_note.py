@@ -1,5 +1,5 @@
 from notes.note import Note
-from tags import day_tag
+from utils.tags import day_tag
 
 
 class PeopleNote(Note):

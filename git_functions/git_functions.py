@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-from tags import day_tag
+from utils.tags import day_tag
 from config import PATH_OBSIDIAN
 
 
