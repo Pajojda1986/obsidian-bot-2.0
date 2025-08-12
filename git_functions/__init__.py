@@ -1,7 +1,5 @@
-from .commit import commit
-from .push import push
+from .git_functions import GitFunctions
 
 __all__ = [
-    "commit",
-    "push"
+    "GitFunctions",
 ]
